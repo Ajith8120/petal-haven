@@ -1,5 +1,5 @@
 .bouq-promo {
-  padding: clamp(2.5rem, 6vw, 5rem) 0;
+  padding: clamp(1.5rem, 4vw, 3rem) 0;
 }
 
 .bouq-promo-card {
@@ -82,6 +82,15 @@
   color: #a54660;
 }
 
+.bouq-copy h2 .bouq-heart {
+  display: inline-block;
+  margin-left: 0.04em;
+  color: #d98983;
+  font-size: 0.72em;
+  line-height: 1;
+  vertical-align: 0.08em;
+}
+
 .bouq-description {
   max-width: 510px;
   margin: 1rem 0 1.5rem;
@@ -156,7 +165,7 @@
 
 @media (max-width: 575.98px) {
   .bouq-promo {
-    padding: 2rem 0;
+    padding: 1.25rem 0;
   }
 
   .bouq-promo-card {
@@ -184,6 +193,9 @@
   }
 
   .bouq-eyebrow {
+    position: relative;
+    z-index: 1;
+    transform: translateY(0.45rem);
     font-size: 0.65rem;
     letter-spacing: 0.12em;
   }

@@ -9,7 +9,7 @@ import './Shop_category.css'
 const categories = [
   { name: 'Petals Garlands', image: petals, href: '/Flowers', alt: 'Fresh flowers arranged for gifting' },
   { name: 'Tuberose Garlands', image: tuberose, href: '/Wedding-Garlands', alt: 'Floral wedding garland collection' },
-  { name: 'Lotus & Crape Jasmine Garlands', image: lotus, href: '/Garlands', alt: 'Traditional handcrafted garlands' },
+  { name: 'Lotus & Crape Garlands', image: lotus, href: '/Garlands', alt: 'Traditional handcrafted garlands' },
   { name: 'Cardamom Garlands', image: cardamom, href: '/Garlands', alt: 'Bridal garland collection' },
 ]
 
@@ -24,9 +24,9 @@ const Shop_category = () => (
         {categories.map((category) => (
           <div className="col-6 col-lg-3" key={category.name}>
             <article className="shop-category-card text-center h-100">
-              <Link className="shop-category-image-link" to={category.href} aria-label={`Shop ${category.name}`}>
+              <div className="shop-category-image-link">
                 <img className="shop-category-image img-fluid" src={category.image} alt={category.alt} />
-              </Link>
+              </div>
               <h3 className="shop-category-title">{category.name}</h3>
               <Link className="shop-category-link" to={category.href}>Shop Now</Link>
             </article>
