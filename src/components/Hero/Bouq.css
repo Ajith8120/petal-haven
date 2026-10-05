@@ -1,0 +1,206 @@
+.bouq-promo {
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.bouq-promo-card {
+  overflow: hidden;
+  min-height: 350px;
+  border: 1px solid rgba(27, 91, 68, 0.08);
+  border-radius: 22px;
+  background: #edfff5;
+  box-shadow: 0 18px 45px rgba(69, 104, 83, 0.1);
+}
+
+.bouq-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  min-height: 350px;
+  padding: 20px 0 20px 20px;
+}
+
+.bouq-photo {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f8dfe8;
+}
+
+.bouq-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 310px;
+  object-fit: cover;
+  transition: transform 450ms ease;
+}
+
+.bouq-photo:hover img {
+  transform: scale(1.045);
+}
+
+.bouq-photo-main img {
+  object-position: 42% center;
+}
+
+.bouq-photo-secondary img {
+  object-position: 50% center;
+}
+
+.bouq-copy {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.5rem, 5vw, 4.75rem);
+  text-align: center;
+}
+
+.bouq-eyebrow {
+  margin: 0 0 0.8rem;
+  color: #a54660;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.bouq-copy h2 {
+  max-width: 610px;
+  margin: 0;
+  color: #183d32;
+  font-family: var(--font-heading, Georgia, serif);
+  font-size: clamp(1.9rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.bouq-copy h2 span {
+  display: block;
+  color: #a54660;
+}
+
+.bouq-description {
+  max-width: 510px;
+  margin: 1rem 0 1.5rem;
+  color: #52645b;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.bouq-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.82rem 1.5rem;
+  border: 1px solid #176448;
+  border-radius: 999px;
+  background: #176448;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.bouq-cta:hover,
+.bouq-cta:focus-visible {
+  transform: translateY(-2px);
+  background: #fff;
+  color: #176448;
+}
+
+.bouq-sparkle {
+  position: absolute;
+  color: #d98983;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.bouq-sparkle-top {
+  top: 8%;
+  left: 13%;
+  font-size: 2rem;
+}
+
+.bouq-sparkle-side {
+  top: 30%;
+  right: 5%;
+  color: #4a9c79;
+  font-size: 2.5rem;
+}
+
+.bouq-sparkle-bottom {
+  right: 13%;
+  bottom: 8%;
+  color: #df9b83;
+  font-size: 2.1rem;
+}
+
+@media (max-width: 991.98px) {
+  .bouq-gallery {
+    min-height: 280px;
+    padding: 16px 16px 0;
+  }
+
+  .bouq-photo img {
+    min-height: 250px;
+    max-height: 340px;
+  }
+
+  .bouq-copy {
+    min-height: 310px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bouq-promo {
+    padding: 2rem 0;
+  }
+
+  .bouq-promo-card {
+    border-radius: 16px;
+  }
+
+  .bouq-gallery {
+    gap: 9px;
+    min-height: 220px;
+    padding: 12px 12px 0;
+  }
+
+  .bouq-photo {
+    border-radius: 11px;
+  }
+
+  .bouq-photo img {
+    min-height: 205px;
+    max-height: 250px;
+  }
+
+  .bouq-copy {
+    min-height: 300px;
+    padding: 2.4rem 1.2rem;
+  }
+
+  .bouq-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+  }
+
+  .bouq-description {
+    font-size: 0.92rem;
+  }
+
+  .bouq-sparkle-side {
+    right: 3%;
+    font-size: 1.8rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bouq-photo img,
+  .bouq-cta {
+    transition: none;
+  }
+}

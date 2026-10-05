@@ -1,0 +1,117 @@
+.shop-categories {
+  padding: clamp(2rem, 4vw, 3rem) 0 clamp(2.25rem, 5vw, 4.5rem);
+  background: #FCE4EC;
+}
+
+.shop-categories-heading {
+  margin-bottom: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.shop-categories-heading h2 {
+  margin: 0;
+  color: #342c2c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.65rem, 3vw, 2.3rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.shop-categories-accent {
+  position: relative;
+  display: inline-block;
+  color: #F48FB1;
+  white-space: nowrap;
+}
+
+.shop-categories-accent::after {
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.16em;
+  left: -0.03em;
+  height: 0.14em;
+  border-radius: 48% 12% 55% 18% / 30% 45% 35% 55%;
+  background: linear-gradient(176deg, transparent 0 13%, currentColor 18% 49%, transparent 54% 62%, currentColor 68% 82%, transparent 88%);
+  content: '';
+  transform: rotate(-2.5deg) skewX(-17deg);
+  transform-origin: left center;
+}
+
+.shop-category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-category-image-link {
+  display: block;
+  width: min(100%, 18rem);
+  overflow: hidden;
+  border-radius: 50% 50% 0 0;
+  background: #f7f1ef;
+}
+
+.shop-category-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: transform 350ms ease;
+}
+
+.shop-category-image-link:hover .shop-category-image,
+.shop-category-image-link:focus-visible .shop-category-image {
+  transform: scale(1.045);
+}
+
+.shop-category-title {
+  margin: 0.9rem 0 0.5rem;
+  color: #342c2c;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.shop-category-link {
+  display: inline-block;
+  padding: 0.25rem 0.1rem;
+  border-bottom: 1px solid #a68b83;
+  color: #76615b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.4;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.shop-category-link:hover,
+.shop-category-link:focus-visible {
+  border-color: #F48FB1;
+  color: #F48FB1;
+}
+
+@media (max-width: 575.98px) {
+  .shop-categories .row {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1.75rem;
+  }
+
+  .shop-category-image-link {
+    width: 100%;
+  }
+
+  .shop-category-title {
+    min-height: 2.6em;
+    margin-top: 0.65rem;
+    font-size: 0.98rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-category-image,
+  .shop-category-link {
+    transition: none;
+  }
+}
