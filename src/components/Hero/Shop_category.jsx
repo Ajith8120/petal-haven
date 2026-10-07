@@ -8,7 +8,7 @@ import './Shop_category.css'
 
 const categories = [
   { name: 'Petals Garlands', image: petals, href: '/Flowers', alt: 'Fresh flowers arranged for gifting' },
-  { name: 'Tuberose Garlands', image: tuberose, href: '/Wedding-Garlands', alt: 'Floral wedding garland collection' },
+  { name: 'Sampangi Garlands', image: tuberose, href: '/Wedding-Garlands', alt: 'Sampangi flower garland collection' },
   { name: 'Lotus & Crape Garlands', image: lotus, href: '/Garlands', alt: 'Traditional handcrafted garlands' },
   { name: 'Cardamom Garlands', image: cardamom, href: '/Garlands', alt: 'Bridal garland collection' },
 ]
